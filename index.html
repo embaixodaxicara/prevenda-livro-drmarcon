@@ -978,7 +978,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="hero-form-box">
           <p class="hero-form-title">Garanta seu exemplar na pré-venda</p>
           <p class="hero-form-sub">Cadastre-se para garantir seu livro físico em primeira mão no lançamento.</p>
-          <form class="lead-form" id="leadForm" novalidate>
+          <form class="lead-form" id="prevenda-livro" novalidate>
             <div class="form-group">
               <label for="name">Nome completo</label>
               <input type="text" id="name" name="name" placeholder="Dr. João Silva" autocomplete="name">
@@ -1235,7 +1235,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   reveals.forEach(el => observer.observe(el));
 
   // ── WHATSAPP MASK ──
-  const whatsInput = document.querySelector('#leadForm #whatsapp') || document.getElementById('whatsapp');
+  const whatsInput = document.querySelector('#prevenda-livro #whatsapp') || document.getElementById('whatsapp');
   whatsInput.addEventListener('input', (e) => {
     let v = e.target.value.replace(/\D/g, '').slice(0, 11);
     if (v.length >= 3 && v.length <= 6) v = `(${v.slice(0,2)}) ${v.slice(2)}`;
@@ -1246,7 +1246,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
 
   // ── FORM VALIDATION ──
-  const form = document.getElementById('leadForm');
+  const form = document.getElementById('prevenda-livro');
   const successState = document.getElementById('successState');
 
   form.addEventListener('submit', (e) => {
